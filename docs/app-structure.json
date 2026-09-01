@@ -1,0 +1,79 @@
+{
+  "app_name": "CodeMaster (Copy)",
+  "app_id": "6a974c4534cc6f3052476006",
+  "app_url": "https://code-master-copy-52476006.base44.app",
+  "builder_url": "https://app.base44.com/apps/6a974c4534cc6f3052476006/editor/preview",
+  "git_remote_source": "s3",
+  "description": "CodeMaster - Learn to Code the Fun Way! Interactive coding education app built with Base44.",
+  "entities": [
+    {
+      "entity_name": "User",
+      "entity_schema": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "description": "The role of the user in the app",
+            "enum": ["admin", "user"]
+          }
+        },
+        "required": ["role"]
+      }
+    }
+  ],
+  "pages": [
+    {
+      "name": "Dashboard",
+      "route": "/",
+      "description": "Home page with learning stats (hours, lessons, streak, projects) and three course path cards"
+    },
+    {
+      "name": "Python Course",
+      "route": "/python-course",
+      "description": "Beginner-level Python programming lessons with progress tracking"
+    },
+    {
+      "name": "Java Course",
+      "route": "/java-course",
+      "description": "Intermediate-level Java development lessons with OOP focus"
+    },
+    {
+      "name": "C Programming",
+      "route": "/c-programming",
+      "description": "Intermediate-level C programming lessons covering memory management and systems"
+    },
+    {
+      "name": "Practice Lab",
+      "route": "/practice-lab",
+      "description": "Interactive code editor with Python, Java, and C tabs. Includes starter code, run button, and pro tips."
+    },
+    {
+      "name": "Coding Games",
+      "route": "/coding-games",
+      "description": "Gamified coding challenges and puzzles"
+    },
+    {
+      "name": "Achievements",
+      "route": "/achievements",
+      "description": "Badge collection and achievement tracking"
+    },
+    {
+      "name": "Progress",
+      "route": "/progress",
+      "description": "Detailed learning progress dashboard"
+    }
+  ],
+  "features": {
+    "authentication": ["Google OAuth", "Email/Password"],
+    "code_editor": {
+      "languages": ["Python", "Java", "C"],
+      "features": ["Syntax highlighting", "Code execution", "Starter templates", "Pro tips"]
+    },
+    "gamification": ["Streaks", "Achievements", "Progress badges", "Hours tracked"],
+    "courses": {
+      "python": { "level": "Beginner", "focus": "Data science, web development, automation" },
+      "java": { "level": "Intermediate", "focus": "OOP, enterprise development" },
+      "c": { "level": "Intermediate", "focus": "Memory management, system-level programming" }
+    }
+  }
+}
